@@ -1,7 +1,9 @@
 # PhileFamilyTwo
 
-### Continues on from quasipickle's original plugin.. 
+### Continues on from quasipickle's original plugin. 
 ### Now updated to be compatible with the latest version of Phile and adds the option to include current folder in the sibling list.
+
+---
 
 A plugin for providing sibling and ancestor records to Phile themes.  By default, Phile provides `{{ pages }}` to theme templates.  This plugin adds `{{ siblings }}` and `{{ ancestors }}`
  
