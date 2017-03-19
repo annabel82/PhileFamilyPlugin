@@ -52,14 +52,14 @@ private function buildFamily($data) {
 
         if($this->settings['show_current_location']) {                                      // If we have set TRUE for show_current_location in the config.php
 
-            if($loop_dir == $this->curr_dir) {                                              // We've found a sibling page irrespective of it being out current page
+            if($loop_dir == $this->curr_dir) {                                              // We've found a sibling page irrespective of it being our current page
              
                $siblings[] = $Page;                                                         // So add it even if it is our current page
             }
 
         } else {                                                                            // If we have set FALSE for show_current_location in the config.php
 
-            if($loop_dir == $this->curr_dir && ($loop_path != $this->curr_path)) {          // We've found a subling page so long as it's not our current page
+            if($loop_dir == $this->curr_dir && ($loop_path != $this->curr_path)) {          // We've found a sibling page so long as it's not our current page
 
                $siblings[] = $Page;                                                         // Add it to sibling list
             }                                                                           

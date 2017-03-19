@@ -41,7 +41,7 @@ Default: TRUE
 
 If TRUE the current location will be included in the sibling list. This is useful if you're building menus, and you wish the included items to be static in order to avoid popping (where the values change) when changing pages.
 
-
+###
 `sibling_dirs`
 Type: *boolean*
 Default: TRUE
@@ -50,6 +50,7 @@ Default: TRUE
 
 Setting this option to `FALSE` will cause `{{ siblings }}` to *only* contain entries for pages.
 
+###
 `ancestor_sort`
 Type: *string*
 Default: 'asc'
