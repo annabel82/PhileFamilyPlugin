@@ -1,6 +1,8 @@
 <?php
 
 return array(
+    # Do we want our sibling list to include our current directory?
+    'show_current_location' => TRUE,
 	# If TRUE, then directories that are siblings of pages will have their index file
 	# included in the list of siblings.
 	#

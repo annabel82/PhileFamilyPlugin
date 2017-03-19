@@ -50,19 +50,28 @@ private function buildFamily($data) {
         $loop_dir      = dirname($loop_path);
         $loop_granddir = dirname($loop_dir);
 
-        if($loop_dir == $this->curr_dir && ($loop_path != $this->curr_path)) {                     // We've found a sibling page
+        if($this->settings['show_current_location']) {                                      // If we have set TRUE for show_current_location in the config.php
 
-            $siblings[] = $Page;
-        }
+            if($loop_dir == $this->curr_dir) {                                              // We've found a sibling page irrespective of it being out current page
+             
+               $siblings[] = $Page;                                                         // So add it even if it is our current page
+            }
+
+        } else {                                                                            // If we have set FALSE for show_current_location in the config.php
+
+            if($loop_dir == $this->curr_dir && ($loop_path != $this->curr_path)) {          // We've found a subling page so long as it's not our current page
+
+               $siblings[] = $Page;                                                         // Add it to sibling list
+            }                                                                           
+        } 
 
         if($this->settings['sibling_dirs'] && $this->curr_dir == $loop_granddir && $loop_file == 'index'.CONTENT_EXT) { 
-                                                                                                   // We've found a sibling directory, so add the index 
-                                                                                                   // file from that directory as a sibling
-            $Page->is_dir = TRUE;
+                                                                                            // We've found a sibling directory, so add the index 
+            $Page->is_dir = TRUE;                                                           // file from that directory as a sibling
             $siblings[]   = $Page;
         }
 
-        if(in_array($loop_path,$ancestor_paths)) {                                                 // We've found an ancestor file
+        if(in_array($loop_path,$ancestor_paths)) {                                          // We've found an ancestor file
 
             $ancestors[$Page->getFilePath()] = $Page;
         }
