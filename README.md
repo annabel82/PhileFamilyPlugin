@@ -7,13 +7,13 @@ A plugin for providing sibling and ancestor records to Phile themes.  By default
 **Questions? Comments?** Feel free to throw something in the issue tracker
 
 ## Installation
-1. Create the directory `plugins/family`
+1. Create following directory structure `phile_install_dir/plugins/annabel82/philefamilytwo`
 2. Download and place  the repository files in that directory.
 3. Modify your config file to include the plugin.  For example:
 
 ```php
 $config['plugins'] = array(
-	'family' => array('active' => true),
+	'annabel82\\philefamilytwo' => array('active' => true),
 );
 ```
 
@@ -22,7 +22,7 @@ Your template files will now have 2 new variables: `{{ siblings }}` and `{{ ance
 
 ### Siblings
 * `{{ siblings }}` will contain a Page object for each page & subdirectory in the current directory (except the current page).  
-  * For subdirectories, the Page object will point to the index.md file of the subdirectory.  
+* For subdirectories, the Page object will point to the index.md file of the subdirectory.  
 * `{{ siblings }}` will be sorted in default sort order.
 
 ### Ancestors
