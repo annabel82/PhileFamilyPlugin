@@ -35,6 +35,12 @@ Your template files will now have 2 new variables: `{{ siblings }}` and `{{ ance
 * Pages in the `{{ ancestors }}` array will have an additional `is_dir` property.
 
 ## Options
+`show_current_location`
+Type: *boolean*
+Default: TRUE
+
+If TRUE the current location will be included in the sibling list. This is useful if you're building menus, and you wish the included items to be static in order to avoid popping (where the values change) when changing pages.
+
 
 `sibling_dirs`
 Type: *boolean*
