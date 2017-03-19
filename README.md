@@ -1,6 +1,7 @@
 # PhileFamilyTwo
 
-## Continues quasipickle's work to make this plugin compatible with the latest versions of Phile.
+### Continues on from quasipickle's original work on this plugin for an older version of Phile. 
+### Now updated to be compatible with the latest versions of Phile.
 
 A plugin for providing sibling and ancestor records to Phile themes.  By default, Phile provides `{{ pages }}` to theme templates.  This plugin adds `{{ siblings }}` and `{{ ancestors }}`
 
@@ -33,7 +34,7 @@ Your template files will now have 2 new variables: `{{ siblings }}` and `{{ ance
 
 ## Options
 
-####`sibling_dirs`
+`sibling_dirs`
 Type: *boolean*
 Default: TRUE
 
@@ -41,7 +42,7 @@ Default: TRUE
 
 Setting this option to `FALSE` will cause `{{ siblings }}` to *only* contain entries for pages.
 
-####`ancestor_sort`
+`ancestor_sort`
 Type: *string*
 Default: 'asc'
 
@@ -66,6 +67,8 @@ Given this content structure:
       redvelvet.md
       angelfood.md
 ```
+
+
 
 <table>
   <tr>
