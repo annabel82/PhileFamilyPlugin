@@ -1,5 +1,8 @@
 <?php
-class Family extends \Phile\Plugin\AbstractPlugin implements \Phile\Gateway\EventObserverInterface {
+namespace Phile\Plugin\Annabel82\FamilyTwo;
+
+
+class Plugin extends \Phile\Plugin\AbstractPlugin implements \Phile\Gateway\EventObserverInterface {
 
 	private $curr_page_path;
 
